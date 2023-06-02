@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 const TodoForm = () => {
+    useEffect(() => {
+        console.log('TODO component rendered!');
+    }, [])
     return (
         <div>
             <form>

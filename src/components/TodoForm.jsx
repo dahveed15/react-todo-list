@@ -14,11 +14,16 @@ const TodoForm = () => {
         });
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(todo.task);
+    }
+
     return (
         <div>
             <form>
                 <input type="text" name="todo" value={todo.task} onChange={handleInputChange} />
-                <button type="submit" onClick={()=> console.log(todo.task)}>Submit</button>
+                <button type="submit" onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     );

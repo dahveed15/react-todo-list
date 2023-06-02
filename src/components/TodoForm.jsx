@@ -1,7 +1,9 @@
 const TodoForm = () => {
     return (
         <div>
-            <p>I AM THE TODO FORM</p>
+            <form>
+                <input type="text" name="todo" />
+            </form>
         </div>
     );
 }

@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          I AM THE APP COMPONENT
+          React Todo List
         </p>
         <TodoForm/>
       </header>

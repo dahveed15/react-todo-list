@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const TodoForm = () => {
     const [todo, setTodo] = useState({
@@ -16,7 +16,10 @@ const TodoForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(todo.task);
+        setTodo({
+            ...todo,
+            task: ''
+        }); 
     }
 
     return (

@@ -1,7 +1,7 @@
-const TodoList = () => {
+const TodoList = (props) => {
     return (
         <div>
-            I AM THE TODOLIST COMPONENT
+            { props.todos.map(todo => <p>{todo.task}</p>) }
         </div>
     )
 };

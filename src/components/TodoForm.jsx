@@ -16,6 +16,10 @@ const TodoForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        props.addTodo({
+            ...todo,
+            id: Date.now()
+        })
         setTodo({
             ...todo,
             task: ''

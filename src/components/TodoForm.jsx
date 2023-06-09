@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const TodoForm = (props) => {
     const [todo, setTodo] = useState({
-        task: props.singleTodo,
+        task: "",
         completed: false
     });
 
@@ -19,7 +19,7 @@ const TodoForm = (props) => {
         setTodo({
             ...todo,
             task: ''
-        }); 
+        });
     }
 
     return (

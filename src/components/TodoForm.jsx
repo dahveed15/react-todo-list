@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-const TodoForm = () => {
+const TodoForm = (props) => {
     const [todo, setTodo] = useState({
-        task: "",
+        task: props.singleTodo,
         completed: false
     });
 

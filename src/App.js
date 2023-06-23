@@ -20,9 +20,13 @@ function App() {
     function toggleComplete(id) {
       setTodos(
         todos.map(todo => {
-          return {
-            ...todo,
-            completed: !todo.completed
+          if (todo.id === id) {
+            return {
+              ...todo,
+              completed: !todo.completed
+            }
+          } else {
+            return todo
           }
         })
       )

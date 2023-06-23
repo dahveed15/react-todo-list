@@ -15,7 +15,7 @@ function App() {
         <p>
           React Todo List
         </p>
-        <TodoForm singleTodo={"Example Todo"} addTodo={addTodo} />
+        <TodoForm addTodo={addTodo} />
         <TodoList todos={todos}/>
       </header>
     </div>

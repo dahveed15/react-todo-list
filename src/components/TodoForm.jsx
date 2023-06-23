@@ -21,7 +21,7 @@ const TodoForm = (props) => {
         e.preventDefault();
         props.addTodo({
             ...todo,
-            id: Date.now()
+            id: uuidv4()
         })
         setTodo({
             ...todo,

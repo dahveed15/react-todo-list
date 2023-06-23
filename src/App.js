@@ -6,6 +6,7 @@ import {useState} from "react";
 
 function App() {
     const [todos, setTodos] = useState([]);
+
     function addTodo(todo) {
         setTodos([todo, ...todos])
     }
@@ -15,6 +16,18 @@ function App() {
         todos.filter(todo => todo.id !== id)
       )
     }
+
+    function toggleComplete(id) {
+      setTodos(
+        todos.map(todo => {
+          return {
+            ...todo,
+            completed: !todo.completed
+          }
+        })
+      )
+    }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,7 +35,7 @@ function App() {
           React Todo List
         </p>
         <TodoForm addTodo={addTodo}/>
-        <TodoList todos={todos} removeTodo={removeTodo}/>
+        <TodoList todos={todos} removeTodo={removeTodo} toggleComplete={toggleComplete} />
       </header>
     </div>
   );
